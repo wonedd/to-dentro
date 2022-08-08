@@ -19,6 +19,7 @@ export const InputBase = styled.input`
     width: 100%;
     height: 100%;
 
+    color: var(--gray);
     &::placeholder {
         color: var(--gray);
     }

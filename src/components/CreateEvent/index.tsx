@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form';
+import { Button } from '../Button';
 import { Input } from '../Input';
+import { Select } from '../Select';
 import { Container, Title, InputBox } from './styles';
 
 export function CreateEvent() {
@@ -8,7 +10,12 @@ export function CreateEvent() {
     return (
         <Container>
             <Title>Nova turma</Title>
-            <Input name="teste" register={register} placeholder="Nome" />
+            <Input
+                name="teste"
+                register={register}
+                placeholder="Nome"
+                type="date"
+            />
             <InputBox>
                 <Input
                     type="time"
@@ -25,6 +32,9 @@ export function CreateEvent() {
                     placeholder="Fim"
                 />
             </InputBox>
+            <Input name="teste" register={register} placeholder="Nome" />
+            <Select name="teste" register={register} placeholder="Nome" />
+            <Button>CRIAR</Button>
         </Container>
     );
 }
