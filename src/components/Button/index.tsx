@@ -9,6 +9,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ isLoading, children, ...rest }: ButtonProps) {
     return (
-        <Container {...rest}>{isLoading ? <Loading /> : children}</Container>
+        <Container isLoading={isLoading} {...rest}>
+            {isLoading ? <Loading /> : children}
+        </Container>
     );
 }

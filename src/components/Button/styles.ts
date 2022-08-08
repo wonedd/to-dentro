@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.button`
+interface ContainerProps {
+    isLoading?: boolean;
+}
+export const Container = styled.button<ContainerProps>`
     all: unset;
 
     cursor: pointer;
@@ -8,10 +11,12 @@ export const Container = styled.button`
     max-width: 312px;
     max-height: 48px;
 
-    border: 1px solid var(--green);
+    border: ${props => (props.isLoading ? 'none' : '1px solid var(--green)')};
     border-radius: 8px;
 
     padding: 8px;
+
+    transition: 0.2s;
 
     display: flex;
     align-items: center;
